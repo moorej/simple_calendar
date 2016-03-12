@@ -1,7 +1,7 @@
 <div class="simple-calendar">
-  <%= link_to "", url_for(params.merge(start_date: date_range.first - 1.day)), class: "prev-link" %>
+  <%= link_to "<span class=\"glyph\"></span>".html_safe, url_for(params.merge(start_date: date_range.first - 1.day)), class: "prev-link" %>
   <span class="cal-header"><%= I18n.t("date.month_names")[start_date.month] %> <%= start_date.year %></span>
-  <%= link_to "", url_for(params.merge(start_date: date_range.last + 1.day)), class: "next-link"  %>
+  <%= link_to "<span class=\"glyph\"></span>".html_safe, url_for(params.merge(start_date: date_range.last + 1.day)), class: "next-link"  %>
 
   <table class="table table-striped">
     <thead>
